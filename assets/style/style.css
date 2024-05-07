@@ -299,3 +299,12 @@ textarea {
 .h-card {
     height: 100% !important;
 }
+
+::placeholder {
+    color: rgb(180, 180, 180) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: white;
+  }
