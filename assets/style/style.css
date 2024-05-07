@@ -295,3 +295,7 @@ textarea {
     border: 1.5px solid rgb(212, 212, 212);
     transition: all 0.5s;
 }
+
+.h-card {
+    height: 100% !important;
+}
