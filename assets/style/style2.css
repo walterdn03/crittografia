@@ -1,1 +1,310 @@
-@import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap);a,body{color:#fff!important}#up,#up:hover{width:70px;height:70px}body{font-family:'Space Grotesk';background-color:#000!important}a,h1{font-family:"Space Grotesk"}html{font-size:18px!important}a{text-align:right;font-size:18px;font-style:normal;font-weight:400;line-height:normal}.btn-outline:hover,a:hover,h1{color:#ffde8b!important}h1,h2{font-weight:700!important}.container-fluid{max-width:1448px;margin:0 auto}.navbar{height:98px}h1{height:100px;font-size:64px!important;font-style:normal!important;line-height:normal;border-bottom:1px solid #fff;border-top:1px solid #fff}h3,p{color:#fff;font-style:normal;line-height:normal}h2{font-family:Space Grotesk!important;font-size:49px!important;line-height:62.52px;text-align:left}h3{font-family:"Space Grotesk";font-size:31px!important;font-weight:400!important}.comefunziona h3,h4{font-family:Space Grotesk;font-size:24px;font-weight:700;text-align:center}p{font-family:"Space Grotesk";font-size:18px;font-weight:400}#box{padding-left:5%;padding-right:5%;text-align:center;width:100%;height:100%;border:1px solid #fff}.comefunziona hr{margin:0!important;border-bottom:1px solid #fff!important;opacity:100%}.comefunziona h3{margin-left:15%;margin-right:15%;letter-spacing:3px;background-color:#fff;color:#000;line-height:30.62px;padding:10px}hr{margin:5% 0 0!important;opacity:100%!important}h2,h3,h4{margin-top:4%!important;margin-bottom:4%!important}.alphabet{display:flex;flex-wrap:wrap}.letter{width:78px!important;height:78px!important;margin:0!important;padding-left:20px!important;padding-right:20px!important;font-size:24px!important;padding:5px;border:1.5px solid #fff;cursor:pointer;display:inline-block;transition:border-color .3s}.card-gold,.card-white{opacity:0px;background-color:#000!important;font-size:22px;font-weight:400;line-height:30.62px;text-align:left;padding:1%;color:#fff!important;font-family:Space Grotesk}.highlight{border-color:#ffde8b}#arrow{position:absolute;height:auto;display:none;margin-bottom:100px!important}.displayflex{display:flex!important}.text-container{display:flex;align-items:center}.number{margin-right:5px}.card-white{border:1.5px solid #fff!important;border-radius:0!important}.card-gold{border:1.5px solid #ffde8b!important;border-radius:0!important}.btn-outline{border:1.5px solid #fff!important;border-radius:0!important;color:#fff!important}.btn-outline:hover{border:1.5px solid #ffde8b!important;border-radius:0!important;transition:.5s}.btn-primary{background-color:#c5a34e!important;color:#fff!important;border-radius:0!important;border:0!important}.btn-primary:hover{background-color:#8b7335!important;border-radius:0!important;color:#!important;transition:.5s}.btn{padding:2%!important;font-family:Space Grotesk!important;font-size:18px!important;font-weight:500!important;text-transform:uppercase}.form-control{width:100%!important;height:20vh!important}.form-control ::placeholder{color:#fff!important}.containerhistory{margin-top:2%!important}textarea{color:#fff!important}.footer p{font-size:16px!important;font-family:Space Grotesk;font-weight:300}#up{padding-top:10px;border:1.5px solid #fff;text-align:center}#up a{font-size:2rem!important;text-decoration:none!important}#up:hover{color:#d4d4d4;border:1.5px solid #d4d4d4;transition:.5s}.h-card{height:100%!important}::placeholder{color:#b4b4b4!important;opacity:1}::-ms-input-placeholder{color:#fff}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    color: white !important;
+    font-family: 'Space Grotesk';
+    background-color: black !important;
+}
+
+html {
+    font-size: 18px !important;
+  }
+
+
+a {
+    color: #FFF !important;
+    text-align: right;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+a:hover {
+    color: #FFDE8B !important;
+    transition: all 0,5;
+}
+
+
+  
+.container-fluid {
+    max-width: 1448px;
+    /*padding-left: 10vw !important;
+    padding-right: 10vw !important;*/
+    margin: 0 auto;
+}
+
+.navbar {
+    height: 98px;
+}
+
+
+/*ATTENZIONE, FONT-SIZE SOVRASTA CLASSE DI BOOTSTRAP, CONTROLLARE SE è REPSPONSIVEEE*/
+h1 {
+    height: 100px;
+    color: #FFDE8B !important;
+    font-family: "Space Grotesk";
+    font-size: 64px !important;;
+    font-style: normal!important;;
+    font-weight: 700 !important;
+    line-height: normal;
+    border-bottom: 1px solid white; 
+    border-top: 1px solid white; 
+}
+
+h2 {
+    font-family: Space Grotesk !important;
+    font-size: 49px !important;;
+    font-weight: 700 !important;
+    line-height: 62.52px;
+    text-align: left;
+    
+}
+
+h3 {
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 31px !important;;
+    font-style: normal ;
+    font-weight: 400 !important;
+    line-height: normal;
+}
+
+h4 {
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;    
+}
+
+
+p {
+    color: #FFF;
+    font-family: "Space Grotesk";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#box {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white; 
+}
+
+/*#box-title {
+    width: 50%;
+    max-width: 70%;
+    letter-spacing: 3px;
+    background-color: white;
+    color: black;
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.62px;
+    text-align: center;
+    padding: 10px;
+}*/
+
+.comefunziona hr {
+    margin: 0 !important;
+    border-bottom: 1px solid white !important;
+    opacity: 100%;
+}
+
+.comefunziona h3 {
+    margin-left: 15%;
+    margin-right: 15%;
+    letter-spacing: 3px;
+    background-color: white;
+    color: black;
+    font-family: Space Grotesk;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.62px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+hr {
+    margin: 0 !important;
+    opacity: 100% !important;
+    margin-top: 5% !important;
+}
+
+h2, h3, h4 {
+    margin-top: 4% !important;
+    margin-bottom: 4% !important;
+}
+
+.alphabet {
+    display: flex;
+    flex-wrap: wrap;
+}
+.letter {
+    width: 78px !important;
+    height: 78px !important;
+    margin: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px!important;;
+    font-size: 24px !important;;
+    margin: 5px;
+    padding: 5px;
+    border: 1.5px solid white; 
+    cursor: pointer;
+    display: inline-block;
+    transition: border-color 0.3s; /* Aggiungiamo una transizione per un effetto fluido */
+}
+.highlight {
+    border-color: #FFDE8B; /* Cambiamo solo il colore del bordo */
+}
+
+#arrow {
+    position: absolute;
+    height: auto; /* altezza immagine freccia */
+    display: none;
+    margin-bottom: 100px !important; /* Regola manualmente la posizione verticale dell'immagine sopra il margine superiore degli span */ 
+  }
+
+  
+.displayflex {
+    display: flex !important;
+}
+
+
+.text-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
+.number {
+    margin-right: 5px; /* Aggiungi spazio tra il numero e il testo */
+}
+
+.card-white {
+    border: 1.5px solid white !important; 
+    border-radius: 0 !important;
+    opacity: 0px;
+    color: white !important;
+    background-color: black !important;
+    font-family: Space Grotesk;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.62px;
+    text-align: left;
+    padding: 1%;
+}
+
+
+.card-gold {
+    border: 1.5px solid #FFDE8B !important; 
+    border-radius: 0 !important;
+    opacity: 0px;
+    color: white !important;
+    background-color: black !important;
+    font-family: Space Grotesk;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.62px;
+    text-align: left;
+    padding: 1%;
+
+}
+
+.btn-outline {
+    border: 1.5px solid #FFFFFF !important;
+    border-radius: 0 !important;
+    color: white !important;
+}
+
+.btn-outline:hover {
+    border: 1.5px solid #FFDE8B !important;
+    border-radius: 0 !important;
+    color: #FFDE8B !important;
+    transition: all 0.5s;
+}
+
+.btn-primary {
+    background-color: #c5a34e !important;
+    color: white !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+
+.btn-primary:hover {
+    background-color: #8b7335 !important;
+    border-radius: 0 !important;
+    color: # !important;
+    transition: all 0.5s;
+}
+
+.btn {
+    padding: 2% !important;
+    font-family: Space Grotesk !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+}
+
+.form-control {
+    width: 100% !important;
+    height: 20vh !important;
+}
+
+.form-control ::placeholder {
+    color: white !important;
+}
+
+.containerhistory {
+    margin-top: 2% !important;
+}
+
+textarea {
+    color: white !important;
+}
+
+.footer p {
+    font-size: 16px!important;
+    font-family: Space Grotesk;
+    font-weight: 300;
+}
+
+#up {
+    width: 70px;
+    height: 70px;
+    padding-top: 10px;
+    border: 1.5px solid white;
+    text-align: center;
+}
+
+#up a {
+    font-size: 2rem !important;
+    text-decoration: none !important;
+}
+
+#up:hover{
+    width: 70px;
+    height: 70px;
+    color: rgb(212, 212, 212);
+    border: 1.5px solid rgb(212, 212, 212);
+    transition: all 0.5s;
+}
+
+.h-card {
+    height: 100% !important;
+}
+
+::placeholder {
+    color: rgb(180, 180, 180) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: white;
+  }
