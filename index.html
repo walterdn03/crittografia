@@ -1,7 +1,483 @@
-<!doctype html><html lang=it><head><meta charset=utf-8 /><meta name=viewport content="width=device-width, initial-scale=1" /><title>Crittografia</title><link style=text/css rel=stylesheet href=assets/style/style.css /><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH crossorigin=anonymous /></head><body><nav class="navbar navbar-expand-lg bg-black"><div class=container-fluid><a class=navbar-brand href=#><strong>La crittografia</strong></a> <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNavDropdown aria-controls=navbarNavDropdown aria-expanded=false aria-label="Toggle navigation"><span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse justify-content-end" id=navbarNavDropdown><ul class=navbar-nav><li class=nav-item><a class="nav-link active" aria-current=page href=#comefunziona>Cos’è e come funziona</a></li><li class=nav-item><a class=nav-link href=#cifrariodicesare>Il Cifrario di Cesare</a></li><li class=nav-item><a class=nav-link href=#decifrafrase>Decifra la frase</a></li><li class=nav-item><a class=nav-link href=#storiaalgoritmi>Principali algoritmi storici</a></li></ul></div></div></nav><div class=container-fluid><h1 class="d-flex align-items-center">La crittografia</h1><a id=comefunziona></a><div class="row mt-5 pt-5"><div class=col-xl><h3>Cos’è e come funziona</h3><p>La crittografia è la <strong>disciplina di proteggere le informazioni </strong>rendendole incomprensibili a chi non è autorizzato a leggerle. In altre parole, si tratta di trasformare i dati originali (chiamati testo in chiaro o plaintext) in una forma che appare casualmente e senza significato (chiamata testo cifrato o ciphertext) attraverso l'uso di <strong>algoritmi matematici e chiavi.</strong></p></div><div class=col-sm></div><div class="comefunziona mt-5 pt-5"><div class="row gx-0"><div class=col-md><div id=box class="pt-5 pb-5"><h3 class=mb-5>PASSWORD</h3><h4>Plain text</h4><p>È il <strong>testo originale,</strong> leggibile, prima che venga crittografato.</p></div></div><div class="col-md d-flex align-items-center justify-content-center flex-column"><hr style="width: 100%;" /><div class="mt-3 w-50"><p class=text-center>In base all'algoritmo scelto il plain text viene criptato</p></div></div><div class=col-md><div id=box class="pt-5 pb-5"><h3 class=mb-5>F0B2LJ95L</h3><h4>Cyper text</h4><p>Dopo il processo della crittografia viene restituito un <strong>valore illeggibile</strong></p></div></div></div></div></div><a id=cifrariodicesare></a><hr class=mt-5 /><div class="row mt-5"><div class=col><h2>Il cifrario di Cesare</h2><h3>Cos'è e quando nasce</h3><p>Il cifrario di Cesare è un semplice cifrario a <strong>sostituzione monoalfabetica,</strong> in cui ogni lettera del testo chiaro viene spostata di un numero fisso di posizioni nell'alfabeto. è stato utilizzato da Gaio Giulio Cesare durante le sue campagne militari intorno al 100 a.C. Quindi, è nato circa nel I secolo a.C. durante l'antica Roma. È uno dei <strong>cifrari più antichi</strong>cdi cui abbiamo conoscenza storica ed è noto per essere stato utilizzato da Cesare per comunicazioni segrete durante le sue conquiste militari.</p></div><div class=col-sm></div><div class=comefunziona-wrapper><div class=row><div class=col-sm-6><h3>Come funziona?</h3></div></div><div class=comefunziona-wrapper><p class="d-flex justify-content-end">Chiave di cifratura: +3</p><div class=row><div class="col-lg-3 order-lg-first"><div class=row><div class=col-auto><h2>1</h2></div><div class="col ms-auto"><p>Seleziono la chiave di cifratura, determinando di quanti posti ogni lettera nel messaggio originale deve essere spostata nell'alfabeto.</p></div></div><div class="row mt-5"><div class=col-auto><h2>2</h2></div><div class="col ms-auto"><p>Ora l’alfabeto corrisponde a lettere diverse, in base alla chiava di cifratura individuata.</p></div></div></div><div class="col-lg-8 ms-auto"><div class="d-flex justify-content-end"><img src=assets/images/schema01.svg alt="Cifrario di Cesare" class=img-fluid /></div></div></div><div class="row mt-5"><div class=col-auto><h2>3</h2></div><div class=col><p>Decifro le lettere in base alla mia chiave di cifratura, il processo non cambia, è solamente l’inverso.</p></div><div class=col-sm-8><img src=assets/images/schema02.svg alt="Cifrario di Cesare" class=img-fluid /></div></div></div><hr style="width: 100%;" /><h3>Esempio di <strong>cifratura a 4</strong></h3><div class=row><div class=col-auto><h2>1</h2></div><div class="col d-flex align-items-center"><p>Frase <strong>non cifrata</strong></p></div><div class=col-sm-8><div class="card card-white displayflex justify-content-end"><div class=card-body>GALLIA EST OMNIS DIVISA IN PARTES TRES</div></div></div></div><div class="row mt-5"><div class=col-auto><h2>2</h2></div><div class="col d-flex align-items-center"><p>Frase<strong> cifrata</strong></p></div><div class=col-sm-8><div class="card card-gold displayflex justify-content-end"><div class=card-body>KEPPOEIWXSSRQMSGMZWEMRTSWXIWXVSQI</div></div></div></div><div class="row mt-4 d-flex justify-content-end"><div class=col-sm-8><p class=text-secondary>Per rendere il messaggio più difficile da decifrare non si mettono spazi al termine delle parole</p></div></div><hr style="width: 100%;" /></div><div class=comefunziona-wrapper><a id=decifrafrase></a> <h2>Decifra la frase</h2><h3 class=mt-0>Prova a decifrare la seguente frase</h3><div class=row><div class=col-sm><p>Chiave di cifratura: <span id=key></span></p></div><div class=col-sm><p class="d-flex gap-1 justify-content-end"><a class="text-secondary d-flex justify-content-end" data-bs-toggle=collapse href=#collapseExample role=button aria-expanded=false aria-controls=collapseExample>Ho bisogno di aiuto</a></p><div class=collapse id=collapseExample><div>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div></div></div></div><div class=row><div class=col><div class="card card-white displayflex justify-content-end"><div class=card-body id=encryptedPhrase></div></div><button type=button class="btn btn-outline mt-3" onclick=generateNewPhrase()>Cambia frase</button></div>
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crittografia</title>
+   <!----> <link style="text/css" rel="stylesheet" href="assets/style/style.css">
+    <link style="text/css" rel="stylesheet" href="assets/style/style2.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><strong>La crittografia</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#comefunziona">Cos’è e come funziona</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cifrariodicesare">Il Cifrario di Cesare</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#decifrafrase">Decifra la frase</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#storiaalgoritmi">Principali algoritmi storici</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+
+      <h1 class="d-flex align-items-center">La crittografia</h1>
+      <a id="comefunziona"></a>
+      <div class="row mt-5 pt-5">
+        <div class="col-xl">
+          <h3>Cos’è  e come funziona</h3>
+          <p>La crittografia è la <strong>disciplina di proteggere le informazioni </strong>rendendole incomprensibili a chi non è autorizzato a leggerle. In altre parole, si tratta di trasformare i dati originali (chiamati testo in chiaro o plaintext) in una forma che appare casualmente e senza significato (chiamata testo cifrato o ciphertext) attraverso l'uso di <strong>algoritmi matematici e chiavi.</strong></p>
+        </div>
+        <div class="col-sm">
+        </div>
+
+        <div class="comefunziona mt-5 pt-5">
+          <div class="row gx-0">
+            <div class="col-md">
+              <div id="box" class="pt-5 pb-5">
+                  <h3 class="mb-5">PASSWORD</h3>
+                <h4>Plain text</h4>
+                <p>È il <strong>testo originale,</strong> leggibile, prima che venga crittografato.</p>
+              </div>
+            </div>
+
+            <div class="col-md d-flex align-items-center justify-content-center flex-column">
+              <hr style="width: 100%;">
+              <div class="mt-3 w-50">
+                  <p class="text-center">In base all'algoritmo scelto il plain text viene criptato</p>
+              </div>
+          </div>
+
+            <div class="col-md">
+              <div id="box" class="pt-5 pb-5">
+                <h3 class="mb-5">F0B2LJ95L</h3>
+               <!---<div id="box-title" class="mb-5 container-fluid">
+                  <h2>F0B2LJ95L</h2>
+                </div>-->
+                <h4>Cyper text</h4>
+                <p>Dopo il processo della crittografia viene restituito un <strong>valore illeggibile</strong></p>
+              </div>
+            </div>
+
+          </div><!--chiusura row-->
+          </div>
+        </div><!--CHIUSURA COME FUNZIONA-->
+        
+        <a id="cifrariodicesare"></a>
+        <hr class="mt-5">    
+        <div class="row mt-5">
+          <div class="col">
+            <h2>Il cifrario di Cesare</h2>
+            <h3>Cos'è e quando nasce</h3>
+            <p>Il cifrario di Cesare è un semplice cifrario a <strong>sostituzione monoalfabetica,</strong> in cui ogni lettera del testo chiaro viene spostata di un numero fisso di posizioni nell'alfabeto. è stato utilizzato da Gaio Giulio Cesare durante le sue campagne militari intorno al 100 a.C. Quindi, è nato circa nel I secolo a.C. durante l'antica Roma. È uno dei <strong>cifrari più antichi</strong>cdi cui abbiamo conoscenza storica ed è noto per essere stato utilizzato da Cesare per comunicazioni segrete durante le sue conquiste militari.</p>
+          </div>
+          <div class="col-sm">
+          </div>
+
+          <div class="comefunziona-wrapper">
+            <div class="row">
+              <div class="col-sm-6">
+                <h3>Come funziona?</h3>
+              </div>
+            </div><!--chiusura row-->
+
+           <!--<div class="row mt-5">
+              <div class="col-auto">
+                  <h2>1</h2>
+              </div>
+              <div class="col">
+                  <p>Seleziono la chiave di cifratura, determinando di quanti posti ogni lettera nel messaggio originale deve essere spostata nell'alfabeto.</p>
+              </div>
+  
+              <div class="col-sm-8">
+                <img src="assets/images/schema01.svg" alt="Cifrario di Cesare" class="img-fluid">    
+               </div>
+               </div>-->
+
+<div class="comefunziona-wrapper">
+  <p class="d-flex justify-content-end">Chiave di cifratura: +3</p>
+               <div class="row">
+                <div class="col-lg-3 order-lg-first">
+                    <div class="row">
+                        <div class="col-auto">
+                            <h2>1</h2>
+                        </div>
+                        <div class="col ms-auto">
+                            <p>Seleziono la chiave di cifratura, determinando di quanti posti ogni lettera nel messaggio originale deve essere spostata nell'alfabeto.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                      <div class="col-auto">
+                        <h2>2</h2>
+                    </div>
+                    <div class="col ms-auto">
+                        <p>Ora l’alfabeto corrisponde a lettere diverse, in base alla chiava di cifratura individuata.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 ms-auto">
+                  <div class="d-flex justify-content-end">
+                      <img src="assets/images/schema01.svg" alt="Cifrario di Cesare" class="img-fluid">    
+                  </div>
+              </div>
+            </div>
+            
+            <div class="row mt-5">
+              <div class="col-auto ">
+                  <h2>3</h2>
+              </div>
+              <div class="col">
+                  <p>Decifro le lettere in base alla mia chiave di cifratura, il processo non cambia, è solamente l’inverso.</p>
+              </div>
+  
+              <div class="col-sm-8">
+                <img src="assets/images/schema02.svg" alt="Cifrario di Cesare" class="img-fluid">    
+
+               </div> 
+              </div>
+            </div>
+            
+               
+            
+
+          <hr style="width: 100%;">
+          <h3>Esempio di <strong>cifratura a 4</strong></h3>          
+          <div class="row">
+            <div class="col-auto">
+                <h2>1</h2>
+            </div>
+            <div class="col d-flex align-items-center">
+                <p>Frase <strong>non cifrata</strong></p>
+            </div>
+
+            <div class="col-sm-8">
+              <div class="card card-white displayflex justify-content-end">
+                <div class="card-body">
+                  GALLIA EST OMNIS DIVISA IN PARTES TRES
+                </div>
+              </div>         
+             </div> 
+            </div>
+
+
+            <div class="row mt-5">
+              <div class="col-auto">
+                  <h2>2</h2>
+              </div>
+              <div class="col d-flex align-items-center">
+                  <p>Frase<strong> cifrata</strong></p>
+              </div>
+  
+              <div class="col-sm-8">
+                <div class="card card-gold displayflex justify-content-end">
+                  <div class="card-body">
+                    KEPPOEIWXSSRQMSGMZWEMRTSWXIWXVSQI
+                  </div>
+                </div>         
+               </div> 
+              </div>
+
+              <div class="row mt-4 d-flex justify-content-end">    
+                <div class="col-sm-8">
+                  <p class="text-secondary">Per rendere il messaggio più difficile da decifrare non si mettono spazi al termine delle parole</p>      
+                 </div> 
+                </div>
+
+                          <hr style="width: 100%;">
+
+              
+        </div>
+        <div class="comefunziona-wrapper">
+          <a id="decifrafrase"></a>
+        <h2>Decifra la frase</h2>
+        <h3 class="mt-0">Prova a decifrare la seguente frase</h3>
+
+        <div class="row">
+          <div class="col-sm">
+            <p>Chiave di cifratura: <span id="key"></span></p>
+          </div>
+          
+          <div class="col-sm">
+            <!--<p class="text-secondary d-flex justify-content-end">Ho bisogno di un’indizio</p>-->
+            <p class="d-flex gap-1 justify-content-end">
+              <a class="text-secondary d-flex justify-content-end" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Ho bisogno di aiuto
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="">
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="card card-white displayflex justify-content-end">
+              <div class="card-body" id="encryptedPhrase">
+                <!-- Qui verrà inserita la frase cifrata -->
+              </div>
+            </div>   
+            <button type="button" class="btn btn-outline mt-3" onclick="generateNewPhrase()">Cambia frase</button>
+          </div><!--chiusura col-->
       
-          <div class=col>
+          <div class="col">
             <form onsubmit="return checkAnswer()">
-              <div class=mb-3>
-                
-                <textarea class="form-control card card-white" id=userAnswer rows=3 placeholder="Inserisci la soluzione"></textarea><button type=submit class="btn btn-primary mt-3 d-flex justify-content-end">Ho indovinato!</button></div></form></div></div><hr style="width: 100%;" /><a id=storiaalgoritmi></a> <h2>Principali algoritmi storici</h2><div class=row><div class=col-sm-1><p>50-60 a.C</p></div><div class=col-sm><p><strong>Il cifrario di Cesare</strong></p><p>Il cifrario di Cesare trae il suo nome dall'antico condottiero romano, Giulio Cesare, che lo utilizzava per comunicazioni militari segrete. Questo cifrario è un esempio di cifrario a sostituzione monoalfabetica, in cui ogni lettera del messaggio originale viene sostituita da una lettera con uno spostamento fisso nel alfabeto. Per esempio, utilizzando uno spostamento di tre posizioni, la lettera A diventerebbe D, la B diventerebbe E, e così via. Questo sistema semplice ma efficace ha consentito a Cesare e ai suoi generali di comunicare in modo sicuro durante le campagne militari dell'antica Roma.</p></div><div class="col-sm-5 justify-content-end"><div class="card card-white justify-content-end h-card"><div class=card-body><p><img src="assets/images/SWM icons/outline/shield-check.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Parola non crittografata" />Parola in chiaro</p><p><img src="assets/images/SWM icons/outline/shield-cross.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Frase crittografata" />TSDFPNRJZS</p><p><img src="assets/images/SWM icons/outline/stopwatch.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Tempo necessario per decriptare frase senza chiave" />Da qualche ora a qualche giorno</p></div></div></div></div><div class="row mt-4"><div class=col-sm-1><p>500 a.C</p></div><div class=col-sm><p><strong>Il codice di Vigenere</strong></p><p>è un tipo di cifrario polialfabetico inventato da Blaise de Vigenère nel XVI secolo. Funziona aggiungendo una parola chiave al testo in chiaro e utilizzandola per cifrare il messaggio. Per cifrare il testo, si ripete la parola chiave lungo l'intera lunghezza del messaggio e si sposta ogni lettera del testo in chiaro in base alla posizione corrispondente della lettera della parola chiave. Per decifrare il messaggio, si utilizza nuovamente la parola chiave per spostare le lettere nella direzione opposta.</p></div><div class="col-sm-5 justify-content-end"><div class="card card-white justify-content-end h-card"><div class=card-body><p><img src="assets/images/SWM icons/outline/shield-check.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Parola non crittografata" />Parola in chiaro</p><p><img src="assets/images/SWM icons/outline/shield-cross.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Frase crittografata" />VXNLALAZINE</p><p><img src="assets/images/SWM icons/outline/stopwatch.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Tempo necessario per decriptare frase senza chiave" />Da qualche ora a qualche settimana</p></div></div></div></div><div class="row mt-4"><div class=col-sm-1><p>1975</p></div><div class=col-sm><p><strong>Enigma</strong></p><p>L'Enigma era una macchina cifrante composta da rotori che sostituivano lettere e un riflettore che invertiva il flusso. Per cifrare, l'operatore inseriva il testo e il processo avviava la sostituzione delle lettere. Per decifrare, il destinatario immetteva il testo cifrato e il processo si invertiva, producendo il testo originale. Il punto chiave era che l'Enigma poteva essere configurata in milioni di modi diversi, rendendo estremamente difficile decifrare i messaggi senza conoscere le impostazioni corrette.</p></div><div class="col-sm-5 justify-content-end"><div class="card card-white justify-content-end h-card"><div class=card-body><p><img src="assets/images/SWM icons/outline/shield-check.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Parola non crittografata" />Parola in chiaro</p><p><img src="assets/images/SWM icons/outline/shield-cross.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Frase crittografata" />FGRPHVVHZUL</p><p><img src="assets/images/SWM icons/outline/stopwatch.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Tempo necessario per decriptare frase senza chiave" />Da qualche ora a 1/2 mesi</p></div></div></div></div><div class="row mt-4"><div class=col-sm-1><p>1977</p></div><div class=col-sm><p><strong>RSA</strong></p><p>RSA è un algoritmo di crittografia asimmetrica utilizzato per cifrare e decifrare dati sensibili su Internet. Si basa sull'uso di una coppia di chiavi: una pubblica e una privata. La chiave pubblica cifra i dati, mentre la chiave privata li decifra. La sicurezza di RSA si basa sulla difficoltà computazionale della fattorizzazione di grandi numeri primi, rendendo praticamente impossibile per un attaccante determinare la chiave privata conosciuta solo la chiave pubblica. Grazie a questa sicurezza, RSA è uno degli algoritmi crittografici più affidabili e ampiamente utilizzati.</p></div><div class="col-sm-5 d-flex justify-content-end"><div class="card card-white justify-content-end h-card"><div class=card-body><p><img src="assets/images/SWM icons/outline/shield-check.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Parola non crittografata" />Parola in chiaro</p><p><img src="assets/images/SWM icons/outline/shield-cross.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Frase crittografata" />D++Co7NfUM2sPeevOOaA7ItZFhYXTDYEMWhGEyYCYBU0z54pPOKeZQby+Ghwtu5jro5/uAPzlA/pwRmwX6HGEQ==</p><p><img src="assets/images/SWM icons/outline/stopwatch.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Tempo necessario per decriptare frase senza chiave" />Da pochi mesi a decine di anni</p></div></div></div></div><div class="row mt-4"><div class=col-sm-1><p>2001</p></div><div class=col-sm><p><strong>AES</strong></p><p>Il cifrario di Cesare trae il suo nome dall'antico condottiero romano, Giulio Cesare, che lo utilizzava per comunicazioni militari segrete. Questo cifrario è un esempio di cifrario a sostituzione monoalfabetica, in cui ogni lettera del messaggio originale viene sostituita da una lettera con uno spostamento fisso nel alfabeto. Per esempio, utilizzando uno spostamento di tre posizioni, la lettera A diventerebbe D, la B diventerebbe E, e così via. Questo sistema semplice ma efficace ha consentito a Cesare e ai suoi generali di comunicare in modo sicuro durante le campagne militari dell'antica Roma.</p></div><div class="col-sm-5 justify-content-end"><div class="card card-white justify-content-end h-card"><div class=card-body><p><img src="assets/images/SWM icons/outline/shield-check.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Parola non crittografata" />Parola in chiaro</p><p><img src="assets/images/SWM icons/outline/shield-cross.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Frase crittografata" />N60lxqkRstRQcuiuUtk8CsYNJBbMaO4FvgQWAw/wVzI=</p><p><img src="assets/images/SWM icons/outline/stopwatch.svg" class=d-inline-block tabindex=0 data-toggle=tooltip title="Tempo necessario per decriptare frase senza chiave" />1 bilione di anni</p></div></div></div></div></div></div><div class=footer><hr style="width: 100%;" /><div class="row mt-5"><div class=col-4><p><strong>La crittografia</strong></p><p>Atlante tecnologico<br />Archiviazione dati<br />Walter De Nicola<br />SUPSI<br />Corso di interaction design, A.A. 2024 <br />Docenti: Andreas Gysin, Giovanni Profeta</p></div><div class=col-4><p><strong>Fonti</strong></p><p></p></div><div class="col-4 d-flex justify-content-end"><div href id=up><a href="">↑</a></div></div></div></div><script>function getRandomInt(n,t){return Math.floor(Math.random()*(t-n+1))+n}function generateRandomKey(){return getRandomInt(1,8)}function encryptPhrase(n,t){for(var i,u="",r=0;r<n.length;r++)i=n.charCodeAt(r),u+=i>=65&&i<=90?String.fromCharCode((i-65+t)%26+65):i>=97&&i<=122?String.fromCharCode((i-97+t)%26+97):n[r];return u}function decryptPhrase(n,t){return encryptPhrase(n,26-t)}function generateNewPhrase(){currentKey=generateRandomKey();currentPhrase=phrases[getRandomInt(0,phrases.length-1)];document.getElementById("key").textContent=currentKey;document.getElementById("encryptedPhrase").textContent=encryptPhrase(currentPhrase,currentKey)}function checkAnswer(){var n=document.getElementById("userAnswer").value.trim().toLowerCase(),t=currentPhrase.toLowerCase();return n===t?(alert("Risposta corretta!"),generateNewPhrase(),attempts=0):(attempts++,attempts<3?alert("Risposta sbagliata. Prova di nuovo."):(alert("Hai esaurito i tentativi. La risposta corretta è: "+currentPhrase),generateNewPhrase(),attempts=0)),document.getElementById("userAnswer").value="",!1}var currentKey=generateRandomKey(),phrases=["lacrittografiarendeidatisicuri","chiavedicifratura","aes"],currentPhrase=phrases[getRandomInt(0,phrases.length-1)],attempts;document.getElementById("key").textContent=currentKey;document.getElementById("encryptedPhrase").textContent=encryptPhrase(currentPhrase,currentKey);attempts=0</script><script src=https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js integrity=sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js integrity=sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js integrity=sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz crossorigin=anonymous></script></div></body></html>
+              <div class="mb-3">
+                <!--<label for="userAnswer" class="form-label">La tua risposta:</label>-->
+                <textarea class="form-control card card-white" id="userAnswer" rows="3" placeholder="Inserisci la soluzione"></textarea>
+                <button type="submit" class="btn btn-primary mt-3 d-flex justify-content-end">Ho indovinato!</button>
+              </div>
+            </form>
+          </div><!--chiusura col-->
+        </div>
+
+      <hr style="width: 100%;">
+
+      <a id="storiaalgoritmi"></a>
+      <h2>Principali algoritmi storici</h2>
+
+      <div class="row">
+        <div class="col-sm-1">
+          <p>50-60 a.C</p>
+        </div>
+
+        <div class="col-sm">
+          <p><strong>Il cifrario di Cesare</strong></p>
+          <p>Il cifrario di Cesare trae il suo nome dall'antico condottiero romano, Giulio Cesare, che lo utilizzava per comunicazioni militari segrete. Questo cifrario è un esempio di cifrario a sostituzione monoalfabetica, in cui ogni lettera del messaggio originale viene sostituita da una lettera con uno spostamento fisso nel alfabeto. Per esempio, utilizzando uno spostamento di tre posizioni, la lettera A diventerebbe D, la B diventerebbe E, e così via. Questo sistema semplice ma efficace ha consentito a Cesare e ai suoi generali di comunicare in modo sicuro durante le campagne militari dell'antica Roma.</p>
+          
+        </div>
+
+        <div class="col-sm-5 justify-content-end">
+          <div class="card card-white justify-content-end h-card">
+            <div class="card-body">
+              <p><img src="assets/images/SWM icons/outline/shield-check.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Parola non crittografata">Parola in chiaro</p>
+              <p class=""><img src="assets/images/SWM icons/outline/shield-cross.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Frase crittografata">TSDFPNRJZS</p>
+              <p class=""><img src="assets/images/SWM icons/outline/stopwatch.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tempo necessario per decriptare frase senza chiave">Da qualche ora a qualche giorno</p>
+            </div>
+          </div>  
+        </div>
+      </div><!--chiusura row-->
+
+      <div class="row mt-4">
+        <div class="col-sm-1">
+          <p>500 a.C</p>
+        </div>
+
+        <div class="col-sm">
+          <p><strong>Il codice di Vigenere</strong></p>
+          <p>è un tipo di cifrario polialfabetico inventato da Blaise de Vigenère nel XVI secolo. Funziona aggiungendo una parola chiave al testo in chiaro e utilizzandola per cifrare il messaggio. Per cifrare il testo, si ripete la parola chiave lungo l'intera lunghezza del messaggio e si sposta ogni lettera del testo in chiaro in base alla posizione corrispondente della lettera della parola chiave. Per decifrare il messaggio, si utilizza nuovamente la parola chiave per spostare le lettere nella direzione opposta.</p>
+          
+        </div>
+
+        <div class="col-sm-5 justify-content-end">
+          <div class="card card-white justify-content-end h-card">
+            <div class="card-body">
+              <p><img src="assets/images/SWM icons/outline/shield-check.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Parola non crittografata">Parola in chiaro</p>
+              <p class=""><img src="assets/images/SWM icons/outline/shield-cross.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Frase crittografata">VXNLALAZINE</p>
+              <p class=""><img src="assets/images/SWM icons/outline/stopwatch.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tempo necessario per decriptare frase senza chiave">Da qualche ora a qualche settimana</p>
+            </div>
+          </div>  
+        </div>
+      </div><!--chiusura row-->
+
+      <div class="row mt-4">
+        <div class="col-sm-1">
+          <p>1975</p>
+        </div>
+
+        <div class="col-sm">
+          <p><strong>Enigma</strong></p>
+          <p>L'Enigma era una macchina cifrante composta da rotori che sostituivano lettere e un riflettore che invertiva il flusso. Per cifrare, l'operatore inseriva il testo e il processo avviava la sostituzione delle lettere. Per decifrare, il destinatario immetteva il testo cifrato e il processo si invertiva, producendo il testo originale. Il punto chiave era che l'Enigma poteva essere configurata in milioni di modi diversi, rendendo estremamente difficile decifrare i messaggi senza conoscere le impostazioni corrette.</p>
+          
+        </div>
+
+        <div class="col-sm-5 justify-content-end">
+          <div class="card card-white justify-content-end h-card">
+            <div class="card-body">
+              <p><img src="assets/images/SWM icons/outline/shield-check.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Parola non crittografata">Parola in chiaro</p>
+              <p class=""><img src="assets/images/SWM icons/outline/shield-cross.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Frase crittografata">FGRPHVVHZUL</p>
+              <p class=""><img src="assets/images/SWM icons/outline/stopwatch.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tempo necessario per decriptare frase senza chiave">Da qualche ora a 1/2 mesi</p>
+            </div>
+          </div>  
+        </div>
+      </div><!--chiusura row-->
+
+      <div class="row mt-4">
+        <div class="col-sm-1">
+          <p>1977</p>
+        </div>
+
+        <div class="col-sm">
+          <p><strong>RSA</strong></p>
+          <p>RSA è un algoritmo di crittografia asimmetrica utilizzato per cifrare e decifrare dati sensibili su Internet. Si basa sull'uso di una coppia di chiavi: una pubblica e una privata. La chiave pubblica cifra i dati, mentre la chiave privata li decifra. La sicurezza di RSA si basa sulla difficoltà computazionale della fattorizzazione di grandi numeri primi, rendendo praticamente impossibile per un attaccante determinare la chiave privata conosciuta solo la chiave pubblica. Grazie a questa sicurezza, RSA è uno degli algoritmi crittografici più affidabili e ampiamente utilizzati.</p>
+          
+        </div>
+
+        <div class="col-sm-5 d-flex justify-content-end">
+          <div class="card card-white justify-content-end h-card">
+            <div class="card-body">
+              <p><img src="assets/images/SWM icons/outline/shield-check.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Parola non crittografata">Parola in chiaro</p>
+              <p class=""><img src="assets/images/SWM icons/outline/shield-cross.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Frase crittografata">D++Co7NfUM2sPeevOOaA7ItZFhYXTDYEMWhGEyYCYBU0z54pPOKeZQby+Ghwtu5jro5/uAPzlA/pwRmwX6HGEQ==</p>
+              <p class=""><img src="assets/images/SWM icons/outline/stopwatch.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tempo necessario per decriptare frase senza chiave">Da pochi mesi a decine di anni</p>
+            </div>
+          </div>  
+        </div>
+      </div><!--chiusura row-->
+      
+      <div class="row mt-4">
+        <div class="col-sm-1">
+          <p>2001</p>
+        </div>
+
+        <div class="col-sm">
+          <p><strong>AES</strong></p>
+          <p>Il cifrario di Cesare trae il suo nome dall'antico condottiero romano, Giulio Cesare, che lo utilizzava per comunicazioni militari segrete. Questo cifrario è un esempio di cifrario a sostituzione monoalfabetica, in cui ogni lettera del messaggio originale viene sostituita da una lettera con uno spostamento fisso nel alfabeto. Per esempio, utilizzando uno spostamento di tre posizioni, la lettera A diventerebbe D, la B diventerebbe E, e così via. Questo sistema semplice ma efficace ha consentito a Cesare e ai suoi generali di comunicare in modo sicuro durante le campagne militari dell'antica Roma.</p>
+          
+        </div>
+
+        <div class="col-sm-5 justify-content-end">
+          <div class="card card-white justify-content-end  h-card">
+            <div class="card-body">
+              <p><img src="assets/images/SWM icons/outline/shield-check.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Parola non crittografata">Parola in chiaro</p>
+              <p class=""><img src="assets/images/SWM icons/outline/shield-cross.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Frase crittografata">N60lxqkRstRQcuiuUtk8CsYNJBbMaO4FvgQWAw/wVzI=</p>
+              <p class=""><img src="assets/images/SWM icons/outline/stopwatch.svg" class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Tempo necessario per decriptare frase senza chiave">1 bilione di anni</p>
+            </div>
+          </div>  
+        </div>
+      </div><!--chiusura row-->
+
+    </div><!--CHIUSURA WRAPPER-->
+    
+    
+    <!--CRITTOGRAFIA-->
+  </div><!--chiusura comefunzione-wrapper-->
+
+  <div class="footer">
+  <hr style="width: 100%;">
+  <div class="row mt-5">
+    <div class="col-4">
+      <p><strong>La crittografia</strong></p>
+      <p>Atlante tecnologico<br>Archiviazione dati<br>Walter De Nicola<br>SUPSI<br>Corso di interaction design, A.A. 2024
+        <br>Docenti: Andreas Gysin, Giovanni Profeta</p>
+    </div>
+
+    <div class="col-4">
+      <p><strong>Fonti</strong></p>
+      <p><a href="https://it.wikipedia.org/wiki/Storia_della_crittografia">Wikipedia</a></p>
+      <p><a href="https://www.crocealeramo.edu.it/images/pdf/LA%20STORIA%20della%20crittografia%201%201.pdf">Crocealeramo</a></p>
+      <p><a href="https://academy.binance.com/it/articles/history-of-cryptography">Binance</a></p>
+      <p><a href="https://www.google.com/search?client=safari&rls=en&q=crittografia+storia&ie=UTF-8&oe=UTF-8#ip=1">Antropia</a></p>
+
+    </div>
+
+    <div class="col-4 d-flex justify-content-end">
+      <div href id="up"><a href="">&uarr;</a></div>
+    </div>
+
+  </div>
+  
+</div>
+
+  
+    <script>
+      // Funzione per generare un numero casuale tra min e max (inclusi)
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+  
+      // Funzione per generare una chiave di cifratura casuale (massimo +8)
+      function generateRandomKey() {
+        return getRandomInt(1, 8); // Chiave casuale tra 1 e 8
+      }
+  
+      // Funzione per cifrare una frase con il cifrario di Cesare
+      function encryptPhrase(phrase, key) {
+        var result = "";
+        for (var i = 0; i < phrase.length; i++) {
+          var charCode = phrase.charCodeAt(i);
+          if (charCode >= 65 && charCode <= 90) { // Lettere maiuscole
+            result += String.fromCharCode(((charCode - 65 + key) % 26) + 65);
+          } else if (charCode >= 97 && charCode <= 122) { // Lettere minuscole
+            result += String.fromCharCode(((charCode - 97 + key) % 26) + 97);
+          } else {
+            result += phrase[i]; // Mantieni caratteri non alfabetici
+          }
+        }
+        return result;
+      }
+  
+      // Funzione per decifrare una frase con il cifrario di Cesare
+      function decryptPhrase(phrase, key) {
+        return encryptPhrase(phrase, 26 - key);
+      }
+  
+      var currentKey = generateRandomKey();
+      var phrases = [
+        "lacrittografiarendeidatisicuri",
+        "chiavedicifratura",
+        "aes"
+        // Aggiungi altre frasi qui
+      ];
+      var currentPhrase = phrases[getRandomInt(0, phrases.length - 1)];
+      document.getElementById("key").textContent = currentKey;
+      document.getElementById("encryptedPhrase").textContent = encryptPhrase(currentPhrase, currentKey);
+  
+      var attempts = 0;
+  
+      // Funzione per generare una nuova frase con una nuova chiave di cifratura
+      function generateNewPhrase() {
+        currentKey = generateRandomKey();
+        currentPhrase = phrases[getRandomInt(0, phrases.length - 1)];
+        document.getElementById("key").textContent = currentKey;
+        document.getElementById("encryptedPhrase").textContent = encryptPhrase(currentPhrase, currentKey);
+      }
+  
+      // Funzione per controllare se la risposta dell'utente è corretta
+      function checkAnswer() {
+        var userAnswer = document.getElementById("userAnswer").value.trim().toLowerCase(); // Ottieni la risposta dell'utente in minuscolo e senza spazi bianchi
+        var originalPhrase = currentPhrase.toLowerCase(); // Ottieni la frase originale in minuscolo
+        if (userAnswer === originalPhrase) {
+          alert("Risposta corretta!");
+          generateNewPhrase(); // Genera una nuova frase
+          attempts = 0; // Reimposta il contatore dei tentativi
+        } else {
+          attempts++;
+          if (attempts < 3) {
+            alert("Risposta sbagliata. Prova di nuovo.");
+          } else {
+            alert("Hai esaurito i tentativi. La risposta corretta è: " + currentPhrase);
+            generateNewPhrase(); // Genera una nuova frase
+            attempts = 0; // Reimposta il contatore dei tentativi
+          }
+        }
+        document.getElementById("userAnswer").value = ""; // Pulisci l'area di input
+        return false; // Per evitare il submit del form
+      }
+    </script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
