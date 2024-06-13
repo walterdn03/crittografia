@@ -6,7 +6,8 @@ Elaborato 2: Intermedio
 
 # Crittografia
 Autore: Walter De Nicola<br>
-[Crittografia](https://walterdn03.github.io/crittografia)
+[Crittografia](https://walterdn03.github.io/crittografia)<br>
+[Video](https://walterdn03.github.io/documentazione/registrazione.mov#)
 
 
 ## Introduzione e tema
